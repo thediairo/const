@@ -7,10 +7,21 @@
     <style>
         body { margin: 0; }
         canvas { display: block; }
+        
+        #prin {
+            width: 900px;
+            height: 0;
+            border-left: 0px solid transparent;
+            border-right: 600px solid transparent;
+            border-bottom: 900px solid rgba(0, 0, 0, 0.8);
+            position: absolute;
+        }
+    
     </style>
 </head>
-<body>
+<body >
     <script src="https://cdn.jsdelivr.net/npm/three@0.152.0/build/three.min.js"></script>
+    <div id="prin">hola</div>
     <script>
         // Crear la escena
         const scene = new THREE.Scene();
@@ -46,6 +57,8 @@
             flag.position.set(8, 6, 0); // Ajustar las coordenadas para la nueva escala
 
             scene.add(flag);
+
+        
 
             // Función de animación
             function animate() {
