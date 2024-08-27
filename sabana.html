@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+    }
+    th, td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+    th {
+        background-color: #4CAF50;
+        color: white;
+    }
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+    tr:hover {
+        background-color: #f1f1f1;
+    }
+    *{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    text-align: center;
+}
+#layout{
+    margin: auto;
+    display: block;;
+    width: 800px;
+    height: 400px;
+    background: rgb(81, 207, 252);
+    border: 3px solid black;
+}
+#nube1{
+    width: 200px;
+    height: 50px;
+    position: relative;
+    top: 50px;
+    left: 50px;
+    border-radius: 100%;
+    background: white;
+    z-index: 1;
+}
+#nube11{
+    width: 80px;
+    height: 60px;
+    position: relative;
+    top: -5px;
+    left: 0px;
+    border-radius: 100%;
+    background: white;
+    z-index: 1;
+}
+
+#nube12{
+    width: 120px;
+    height: 80px;
+    position: absolute;
+    top: -15px;
+    left: 40px;
+    border-radius: 100%;
+    background: white;
+    z-index: 1;
+}
+#nube13{
+    width: 80px;
+    height: 60px;
+    position: absolute;
+    top: -5px;
+    left: 120px;
+    border-radius: 100%;
+    background: white;
+    z-index: 1;
+}
+
+#nube2{
+    width: 200px;
+    height: 50px;
+    position: relative;
+    top: 0px;
+    left: 350px;
+    border-radius: 100%;
+    background: white;
+    z-index: 1;
+}
+#nube21{
+    width: 80px;
+    height: 60px;
+    position: relative;
+    top: -5px;
+    left: 0px;
+    border-radius: 100%;
+    background: white;
+    z-index: 1;
+}
+
+#nube22{
+    width: 120px;
+    height: 80px;
+    position: absolute;
+    top: -15px;
+    left: 40px;
+    border-radius: 100%;
+    background: white;
+    z-index: 1;
+}
+#nube23{
+    width: 80px;
+    height: 60px;
+    position: absolute;
+    top: -5px;
+    left: 120px;
+    border-radius: 100%;
+    background: white;
+    z-index: 1;
+}
+#piso{
+    display: block;
+    width: 800px;
+    height: 30px;
+    background:green;
+    position: relative;
+    top:270px;
+}
+#arbol1{
+    display: block;
+    width: 80px;
+    height: 140px;
+    position: relative;
+    left: 70px;
+    top: 55px;
+}
+#arbol2{
+    display: block;
+    width: 80px;
+    height: 140px;
+    position: relative;
+    left: 670px;
+    top: -85px;
+}
+#tallo{
+    display: block;
+    width: 40px;
+    height: 140px;
+    position: relative;
+    z-index: 0;
+    left: 20px;
+    top: -5px;
+    background: maroon;
+}
+#copa{
+    display: block;
+    width: 80px;
+    height: 80px;
+    position: relative;
+    z-index: 1;
+    border-radius: 100%;
+    background: green;
+
+}
+#casa{
+    display: block;
+    width: 400px;
+    height: 200px;
+    background: black;
+    position: relative;
+    left: 210px;
+    top: -240px;
+}
+#puerta{
+    width: 80px;
+    height: 130px;
+    background: chocolate;
+    position: relative;
+    left: 10px;
+    top: 70px;
+}
+#ventana{
+    width: 80px;
+    height: 80px;
+    background: blue;
+    position: relative;
+    left: 300px;
+    top: -100px;
+}
+#techo{
+    display: block;
+    width: 600px;
+    height: 40px;
+    background: white;
+    position: relative;
+    left: 120px;
+    top: -480px;
+}
+#persona{
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    left: 10px;
+    top: -400px;
+    border-radius: 100%;
+    background: black;
+}
+#cuerpo{
+    display: block;
+    width: 10px;
+    height: 40px;
+    background: black;
+    position: relative;
+    left: 30px;
+    top: -400px;
+}
+#pier{
+    display: block;
+    width: 10px;
+    height: 40px;
+    background: black;
+    position: relative;
+    left: 10px;
+    top: -410px;
+    rotate: 60deg;
+}
+#pier2{
+    display: block;
+    width: 10px;
+    height: 40px;
+    background: black;
+    position: relative;
+    left: 50px;
+    top: -450px;
+    rotate: 120deg;
+}
+#bra1{
+    display: block;
+    width: 10px;
+    height: 40px;
+    background: black;
+    position: relative;
+    left: 10px;
+    top: -530px;
+    rotate: 90deg;
+}
+#bra2{
+    display: block;
+    width: 10px;
+    height: 40px;
+    background: black;
+    position: relative;
+    left: 50px;
+    top: -570px;
+    rotate: 90deg;
+}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+<body>
+    <div style=" width: 100%; height: 96.1%; position: absolute; top: 50px;" id="prin">
+        <div id="cc1" style="position: absolute; visibility: collapse;">La historia completa de HTML, aunque reciente es, además de extensa, francamente
+            interesante, y debido a esa extensión, es por lo que, a continuación, se muestra un
+            resumen de la misma. El origen de HTML se remonta a 1980, cuando el físico Tim
+            Berners-Lee, trabajador del CERN (http://www.cern.ch/) (Organización Europea para la
+            Investigación Nuclear) propuso un nuevo sistema de "hipertexto" para compartir
+            documentos.
+            Los sistemas de "hipertexto" habían sido desarrollados algunos años antes con la
+            finalidad de permitir a los usuarios acceder a la información relacionada con los
+            documentos electrónicos que estaban visualizando, conviertiéndose, sin ellos esperarlo,
+            en los “precursores” de los enlaces de las páginas web actuales.
+            Tim Berners-Lee presentó su sistema de “hipertexto”, una vez finalizado y depurado, a
+            una convocatoria organizada para desarrollar un sistema de "hipertexto" para Internet
+            (que nada tenía que ver con la Internet que conocemos hoy). Después de trabajar junto al
+            ingeniero de sistemas Robert Cailliau sobre su proyecto inicial, ambos, crearon una
+            propuesta conocida como WorldWideWeb o W3, que como habrán podido comprobar,
+            fué la que gano el concurso.
+            El primer documento formal con la descripción de HTML se publicó en 1991 bajo el
+            nombre "HTML Tags" (Etiquetas de HTML) y aún se puede consultar, como histórico, en:
+            (http://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html)
+            HTML – Historia y Características Generales
+            Página 3
+            La primera propuesta oficial para convertir HTML en un estándar se realizó en 1993 por
+            parte de la IETF (http://www.ietf.org/) (Internet Engineering Task Force). Aunque se
+            consiguieron avances significativos, definiéndose las etiquetas para imágenes, tablas y
+            formularios, ninguna de las dos propuestas realizadas como “estándar” (las llamadas
+            HTML y HTML+), consiguieron convertirse de forma oficial en un estándar.
+            Dos años después (1995), el mismo IETF organiza un grupo de trabajo de HTML, tras el
+            cual, consigue publicar, en septiembre de dicho año, el estándar conocido como HTML
+            2.0, siendo, a pesar de su versión 2.0, el primer estándar oficial del “lenguaje” HTML.
+            A partir de 1996, es el W3C, acrónimo de World Wide Web Consortium, el que publica los
+            estándares de HTML. La versión HTML 3.2 se publicó en Enero de 1997 y es la primera
+            recomendación ofical de HTML publicada por dicha organización. Esta revisión ya
+            recogen e incorpora los últimos avances utilizados en el diseño de las páginas web
+            hasta ese año, de entre los que podemos destacar los applets de Java y la posibilidad de
+            textos “enmarcados” y que se disponen “alrededor” de las imágenes.
+            Con la publicación del estándar HTML 4.0 en Abril de 1998 (versión corregida y ampliada
+            de la publicada originalmente en Diciembre de 1997), se produce un gran avance en
+            relación a versiones anteriores. Alguna de las novedades más relevantes de esta
+            versión, es la incorporación, por primera vez, de las “hojas de estilos CSS”, así como la
+            posibilidad de incluir pequeños programas o scripts en el diseño de las páginas web.
+            Una significativa mejora en la accesibilidad de las páginas diseñadas, la posibilidad de
+            elaborar tablas complejas e importantes mejoras en la confección y uso de formularios,
+            son además, algunas de sus otras aportaciones.
+            Se publica en diciembre de 1999 el penúltimo “estándar oficial” de HTML conocido como
+            la versión 4.01, revisión y actualización de la versión anterior que no llega a aportar
+            novedades significativas.
+            Desde la publicación de HTML 4.01, la actividad de estandarización de HTML se detuvo
+            por parte del W3C, que se centró en el desarrollo de un nuevo estándar, el XHTML.
+            Debido a ello, y en el año 2004, las empresas Apple, la Fundación Mozilla y Opera,
+            mostraron su preocupación por la falta de interés del W3C en el estámdar HTML y
+            decidieron crear una nueva asociación llamada WHATWG , en las que las tres entidades
+            estaban representadas. El acróniomo se corresponde a Web Hypertext Application
+            Technology Working Group, y su página en la red es http://www.whatwg.org/.
+            La actividad del WHATWG se centró desde su inicio en el desarrollo del estándar HTML
+            5.0, y cuyo primer borrador oficial se publica en enero de 2008.
+            Debido a la fuerza de las empresas que forman el grupo WHATWG y a la publicación de
+            un primer borrador de la versión 5.0, en marzo de 2007, el Consorcio W3C decidió
+            retomar la actividad estandarizadora de HTML, publicándose hace poco tiempo este
+            estándar. (http://www.w3.org/TR/html5/)
+            Además, W3C ha continuado con la estandarización de XHTML, una versión avanzada
+            de HTML y basada en XML. La primera versión de XHTML se denominó 1.0 y fué
+            publicada en enero de 2000, con posterior revisión en agosto de 2002. XHTML nace
+            como una adaptación específica al lenguaje XML del estándar HTML 4.01, mantieniendo
+            casi todas sus “etiquetas” y características, a las que añade algunas propias de XML.
+            XHTML y HTML se desarrollan en la actualidad de forma conjunta en el seno del W3C. </div>
+        <div id="cc2" style="position: absolute; visibility: collapse;"><h1>Etiquetas basicas de html</h1>
+        <p>Para titulos y subtitulos se ocupa "h" desde el 1 hasta el 6, mientras mayor el número mas pequeña la letra </p>
+        <h1>Hola</h1>
+        <h2>Hola</h2>
+        <h3>Hola</h3>
+        <h4>Hola</h4>
+        <h5>Hola</h5>
+        <h6>Hola</h6>
+        <p>La etiqueta "p" se utilaza para hacer parrafos como este</p>
+        <b>La etiqueta "b" es para hacer negritas</b>
+        <br><br><p>La etiqueta "br" es para saltos de linea</p>
+        <p>Html:5 nos dara la estructura basica de un documento</p>
+        <i>"i" es para cursivas </i><br>
+        <u>"u" es para texto subrayado</u><br>
+        <s>"s" es para texto tachado </s>
+        <center>"center" centrara el texto</center>
+        <p>"link" nos permitira agregar archivos css</p>
+        <p>"script" nos permite agregar archivos js o escribir lenguaje js desde el mismo documento</p>
+        </div>
+        <div id="cc3" style="position: absolute;  visibility: collapse;"><h1>NO se ha que se refiere con texto</h1><p> pondre el "lorem" que escribe texto en latin ok? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero officiis ducimus sed provident. Quae, ducimus animi totam eaque quis est. Voluptate provident officia sint ea labore dolores rem dolor nam.</p></div>
+        <div id="cc4" style="position: absolute; visibility: collapse;"><h1>Listas</h1>
+        <p>Se ocupan para hacer listados, se empizan por "ol" o "ul", y adentro "li", tambien hay diferentes tipos</p>
+        <ul>
+            <li>Hola1</li>
+            <li>Hola2</li>
+        </ul>
+        <ol type="1">
+            <li>Hola</li>
+            <li>Hola</li>
+        </ol>
+        <ol type="a">
+            <li>Hola</li>
+            <li>Hola</li>
+        </ol>
+        <ol type="i">
+            <li>Hola</li>
+            <li>Hola</li>
+        </ol>
+        </div>
+        <div id="cc5" style="position: absolute; visibility: collapse;"><h1>Tablas</h1>
+        <p>Pos para hacer tablas, se ocupa la etiqueta "table", "tr" y "td" para las filas y columnas, ya si eres pro tambien ocupas "tbody", thead es para la cabeza, inglis papá</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Especificación</th>
+                    <th>Smartphone A</th>
+                    <th>Smartphone B</th>
+                    <th>Smartphone C</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Procesador</td>
+                    <td>Snapdragon 888</td>
+                    <td>Exynos 2100</td>
+                    <td>Apple A15 Bionic</td>
+                </tr>
+                <tr>
+                    <td>RAM</td>
+                    <td>8 GB</td>
+                    <td>12 GB</td>
+                    <td>6 GB</td>
+                </tr>
+                <tr>
+                    <td>Almacenamiento</td>
+                    <td>128 GB</td>
+                    <td>256 GB</td>
+                    <td>128 GB</td>
+                </tr>
+                <tr>
+                    <td>Pantalla</td>
+                    <td>6.7" AMOLED</td>
+                    <td>6.8" AMOLED</td>
+                    <td>6.1" Super Retina XDR</td>
+                </tr>
+                <tr>
+                    <td>Batería</td>
+                    <td>4500 mAh</td>
+                    <td>5000 mAh</td>
+                    <td>3095 mAh</td>
+                </tr>
+                <tr>
+                    <td>Cámara Principal</td>
+                    <td>108 MP + 12 MP</td>
+                    <td>64 MP + 12 MP</td>
+                    <td>12 MP + 12 MP</td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+
+        <div id="cc6" style="position: absolute; visibility: collapse;"><h1>Imagenes</h1>
+         <p> Para poner imagenes se ocupa la etiqueta "img", puede ser de manera local o copiando una dirreción web</p>
+         <img src="data:image/jpeg;base64,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">
+        </div>
+        <div id="cc7" style="position: absolute; visibility: collapse;"><h1>Videos</h1>
+        <p>Lo mismo que las imagen pero con video, solo que aqui podemos poner controles o algunos atributos</p>
+        <video src=""></video>
+        </div>
+        <div id="cc8" style="position: absolute; visibility: collapse;"><h1>Audio</h1>
+        <p>Sirve para poner un auidio, que mas esperabas?</p>
+        </div>
+        <div id="cc9" style="position: absolute; visibility: collapse;"><h1>Hipervinculos</h1>
+        <p>Te sirven para ir a otras paginas dentro de tu sitio o inclusive ir a otros sitios, tambien ir a otras partes dentro de la misma pagina, se pueden personalizar, la etiqueta es "a"</p><br>
+        <a href="https://es.aliexpress.com/w/wholesale-teclado-mecánico.html?spm=a2g0o.home.auto_suggest.1.3ad170e5fTzsxS">aliexpress</a><br>
+        <a href="https://docs.gitlab.com/ee/tutorials/make_first_git_commit/" style="text-decoration: none;">tutoriales de git</a>
+        </div>
+        <div id="cc10" style="position: absolute; visibility: collapse;"><h1>Formularios</h1>
+        <p>Son los elementos que componen un formulario</p>
+        <form action="index.php" method="get" enctype="text/plain" >
+            <table border="" width="90%" style="margin: auto">
+                <tr>
+                    <td>Nombre</td>
+                    <td>Descripcion</td>
+                    <td>Ejemplo</td>
+                </tr>
+                <tr>
+                    <td>1.campo de texto</td>
+                    <td>Recopila información</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2.Campo contraseña</td>
+                    <td>Oculta los caractere en contraseñas</td>
+                    <td><input type="password" name="" id="" placeholder="Introduce tu contraseña" required ></td>
+                </tr>
+                <tr>
+                    <td>3.Casilla de verificación</td>
+                    <td>Sirve para seleccionar una opción</td>
+                    <td><input type="checkbox" name="" id="" checked><input type="checkbox" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>4.Boton Radio</td>
+                    <td>Sirve para seleccionar una opción</td>
+                    <td><input type="radio" name="escuela" id="boton1" checked>CECYTEM <br>
+                    <input type="radio" name="escuela" id="boton2" >CBT <br>
+                    <input type="radio" name="escuela" id="boton3" >CONALEP</td> <br>
+                </tr>
+                <tr>
+                    <td>5.CAMPO OCULTO</td>
+                    <td>Para ocultar información</td>
+                    <td><input type="hidden" name="oculto" id="oculto" value="Mi conraseña es: 123456"></td>
+                </tr>
+                <tr>
+                    <td>6.Area de texto</td>
+                    <td>Area en donde escribir</td>
+                    <td><textarea name="texto" id="texto" cols="30" rows="10" ></textarea></td>
+                </tr>
+                <tr>
+                    <td>7.Lista desplegable</td>
+                    <td></td>
+                    <td><select name="lista" id="lista">
+                        <option value="SAUL">SAUL</option>
+                        <option value="Jose">Jose</option>
+                        <option value="Bruno">Bruno</option>
+                        <option value="Lael">Lael</option>
+                        <option value="Menorcito">Menorcito</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td>8.Boton enviar</td>
+                    <td>Boton mas importante</td>
+                    <td><input type="submit"></td>
+                </tr>
+                <tr>
+                    <td>9.Boton de regresar</td>
+                    <td>Restablece todo lo del fórmula</td>
+                    <td><input type="reset"></td>
+                </tr>
+    
+                <tr>
+                    <td>11 Boton de imagen</td>
+                    <td>Es una imagen pero en realidad es un boton  </td>
+                    <td><input type="image" src="mortal.jpeg"></td>
+                </tr>
+                <tr>
+                    <td>12 Boton color</td>
+                    <td>Deja elegir el color por mesio de una paleta de colores</td>
+                    <td><input type="color"></td>
+                </tr>
+                <tr>
+                    <td>13. Boton comando</td>
+                    <td>Boton estandar </td>
+                    <td><input type="button" value="ACEPTAR"></td>
+                </tr>
+                <tr>
+                    <td>14. Campo fecha</td>
+                    <td>Permite poner la fecha por dia mes y año </td>
+                    <td><input type="date" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>15. Fecha y hora</td>
+                    <td>Permite poner la fecha y la hora juntos</td>
+                    <td><input type="datetime" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>16. Fecha y hora local</td>
+                    <td>O ne la hora y fecha del lugar actual en donde estas</td>
+                    <td><input type="datetime-local" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>17. campo email</td>
+                    <td>nos permite poner el email y no falten elementos</td>
+                    <td><input type="email" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>18. Campo archivo</td>
+                    <td>Bonton que Permite poner un archivo seleccionado desde la computadora</td>
+                    <td><input type="file" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>19. Mes del año</td>
+                    <td>Permite poner mes y año </td>
+                    <td><input type="month" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>20. CAMPO NUMERICO</td>
+                    <td>Permite poner solo numeros enteros o decimales</td>
+                    <td><input type="number" name="" id="" step="0.5" value="0"></td>
+                </tr>
+                <tr>
+                    <td>21. Campo slider </td>
+                    <td>Es un slider que puede tener distintas funciones</td>
+                    <td><input type="range" name="" id="" value="0" min="0" max="100"></td>
+                </tr>
+                <tr>
+                    <td>22. CAMPO BUSQUEDA</td>
+                    <td>Campo para buscar algo dentro de una página (buscador)</td>
+                    <td><input type="search" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>23. CAMPO telefono</td>
+                    <td>Permite solo poner el numero de teléfono</td>
+                    <td><input type="tel" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>24. campo hora</td>
+                    <td>permite poner la hora actual u hora establecida</td>
+                    <td><input type="time" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>25. URL</td>
+                    <td>Campo para poner una dirección de paginas web (URL)</td>
+                    <td><input type="url" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>26. semana del año</td>
+                    <td>Permite solo poner la semana y el año que desees </td>
+                    <td><input type="week" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>27. Lista oculta</td>
+                    <td>Es una lista que autocompleta lo que sea que estes escribiendo</td>
+                    <td><input list="paises" type="text">
+                    <datalist id="paises">
+                        <option value="mexico"></option>
+                        <option value="españa"></option>
+                        <option value="colombia"></option>
+                    </datalist></td>
+                </tr>
+                <tr>
+                    <td>28.PROGRESS</td>
+                    <td>Es una barra de progreso que simula cargar algo</td>
+                    <td><progress id="file" max="100" value="70">70%></progress></td>
+                </tr>
+                <tr>
+                    <td>29. ESTETICO</td>
+                    <td>Es un borde y orden que se le pone a un formulario</td>
+                    <td><fieldset>
+                        <legend>DATOS PERSONALES</legend>
+                        Nombre <br>
+                        <input type="text"> <br>
+                        Contraseña <br>
+                        <input type="password" name="" id=""> <br>
+                        Fecha de nacimiento <br>
+                        <input type="date" name="" id="">
+                    </fieldset></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </form>
+    
+        </div>
+        <div id="cc11" style="position: absolute; visibility: collapse;"><h1>Etiquetas de orden</h1>
+        <p>Son etiquetas que no se ven visualmente reflejadas siempre, aqui encontramos etiquetas como footer, hgroup, div, article y otras mas, la verdad yo no las utilizo (solo el div) pero pues dicen por ahi que un buen programador las utiliza. No se total, ya mejor voy a ser licenciado</p>
+        <p>header: la etiqueta de encabezamiento define el contenido introductorio de una página o sección.
+            <br>nav: la etiqueta de navegación se utiliza para los enlaces de navegación. Puede anidarse dentro de la etiqueta header, pero las etiquetas nav de navegación secundaria también suelen usarse en otras secciones de la página.
+            <br>main: esta etiqueta contiene el contenido principal (también llamado cuerpo) de una página. Solo debería haber una etiqueta main por página.
+            <br>article: la etiqueta artículo define el contenido independiente de la página o web en la que se encuentra. No significa necesariamente una "entrada del blog". Piensa en ella más bien como "una prenda de vestir": una etiqueta independiente que puede emplearse en varios contextos.
+           <br> section: utilizar section es una forma de agrupar contenidos que tratan sobre temas similares. Las etiquetas de sección son diferentes a las de artículo, no son necesariamente autónomas, sino que forman parte de algo más. 
+            <br>aside: un elemento "aside" define el contenido de menor importancia. Suele emplearse para las barras laterales, que incluyen información complementaria pero no esencial.
+            <br>footer: usa footer  en la parte inferior de una página. La etiqueta suele incluir información de contacto, derechos de autor y navegación por la web.</p>
+    </div> 
+        <div id="cc12" style="position: absolute; visibility: collapse;"><h1>Frames</h1>
+        <p>La ver no se definir bien lo que es esto, entonces, preguntemosle a mi papi chat gpt, Los frames en HTML se utilizan para dividir una ventana del navegador en varias secciones independientes, cada una de las cuales puede mostrar un documento HTML diferente. Esta técnica fue bastante popular en versiones anteriores de HTML, especialmente con el uso de frameset, pero ha sido en gran medida reemplazada por técnicas más modernas como el uso de CSS para diseño de layouts y el uso de iframes para incrustar contenido.</p><br>
+        <p>AAAAAAA era eso, creo que me habria funcionado el anterior semestre, diablos, bueno, vamos con un ejemplo del googleee <br> <b>ok? parece que esto es algo OBSOLETO, a ver que puedo hacer</b></p>
+        
+        <iframe src="tools.html" width="600" height="400" style="border:none;">
+        </iframe>
+        <b>Ya me salio :) era con iframe</b>
+        </div>
+        <div id="cc13" style="position: absolute; visibility: collapse;"><h1>Estructura</h1>
+        <p>AAAA esto ya es mucho relleno no? hay que ver otras cosas :(, pero bueno, la estructura de una pagina es muy simple, lleva las etiquetas basicas que vimos junto con las del oreden, mas o menos algo asi:</p>
+        <iframe src="https://peaceful-salamander-8425a7.netlify.app/media" width="2000px" height="1000px"></iframe>
+        </div>
+        <div id="cc14" style="position: absolute; visibility: collapse;"><h1>Los metadatos</h1>
+        <p>Estos son datos que le sirven al navegador, no son visibles dentro de la pagina y van en la parte de header, sirven para poner acentos, contar de que va nuestra pagina y pues dar información, por eso metaDatos, algunos ejemplos</p>
+        <p>meta charset="UTF-8"</p>
+        <p>meta name="description" content="Descripción de la página"</p>
+        <p>meta name="keywords" content="palabra clave1, palabra clave2"</p>
+        <p>meta name="author" content="Nombre del autor"</p>
+        <p>meta name="robots" content="index, follow"</p>
+        
+        </div>
+        <div id="cc15" style="position: absolute; visibility: collapse;"><h1>Otras</h1>
+        <p>No se que poner asi que voy a poner t4abajos del anterior semestre </p>
+
+        <div id="layout">
+            <div id="nube1">
+                <div id="nube11"></div>
+                <div id="nube12"></div>
+                <div id="nube13"></div>
+            </div>
+            <div id="nube2">
+                <div id="nube21"></div>
+                <div id="nube22"></div>
+                <div id="nube23"></div>
+            </div>
+            <div id="piso"></div>
+            <div id="arbol1">
+                <div id="copa"></div>
+                <div id="tallo"></div>
+            </div>
+            <div id="arbol2">
+                <div id="copa"></div>
+                <div id="tallo"></div>
+            </div>
+            <div id="casa">
+                <div id="puerta"></div>
+                <div id="ventana"></div>
+            </div>
+            <div id="techo"></div>
+            <div id="persona"></div>
+            <div id="cuerpo"></div>
+            <div id="pier"></div>
+            <div id="pier2"></div>
+            <div id="bra1"></div>
+            <div id="bra2"></div>
+            <div id="per5"></div>
+            <div id="per6"></div>
+        </div>
+        
+    </div>
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+          
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation" id="barra">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel"  style="position: absolute; left: 0px; height: 1400px;">
+            <div class="offcanvas-header" >
+              <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menú</h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close" id="volver"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <button id="c1">Antecendentes</button><br>
+                  <button id="c2">Etiqueta</button><br>
+                  <button id="c3">Texto</button><br>
+                  <button id="c4">Listas</button><br>
+                  <button id="c5">Tablas</button><br>
+                  <button id="c6">Imagen</button><br>
+                  <button id="c7">Video</button><br>
+                  <button id="c8">Audio</button><br>
+                  <button id="c9">Hipervinculos</button><br>
+                  <button id="c10">Formularios</button><br>
+                  <button id="c11">Semanticas</button><br>
+                  <button id="c12">Frames</button><br>
+                  <button id="c13">Estructura</button><br>
+                  <button id="c14">Meta datos</button><br>
+                  <button id="c15">Extras</button><br>
+                </li>
+              
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+     <script>
+        document.getElementById("barra").onclick=()=>{
+            document.getElementById("prin").style=" width: 100%; height: 96.1%; position: absolute; top: 50px; left: 400px;";
+            
+            }
+            document.getElementById("volver").onclick=()=>{
+            document.getElementById("prin").style=" width: 100%; height: 96.1%; position: absolute; top: 50px;"
+            
+            }
+            document.getElementById("c1").onclick=()=>{
+            document.getElementById("cc1").style="position: absolute; visibility: visible;"
+            document.getElementById("cc2").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc3").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc4").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc5").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc6").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc7").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc8").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc9").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc10").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc11").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc12").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc13").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc14").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc15").style=" position: absolute; visibility: collapse;"
+            
+            }
+            document.getElementById("c2").onclick=()=>{
+            document.getElementById("cc2").style=" position: absolute; visibility: visible;"
+            document.getElementById("cc1").style="position: absolute; visibility: collapse;"
+            document.getElementById("cc3").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc4").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc5").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc6").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc7").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc8").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc9").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc10").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc11").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc12").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc13").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc14").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc15").style=" position: absolute; visibility: collapse;"
+            
+            }
+            document.getElementById("c3").onclick=()=>{
+            document.getElementById("cc2").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc1").style="position: absolute; visibility: collapse;"
+            document.getElementById("cc3").style=" position: absolute; visibility: visible;"
+            document.getElementById("cc4").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc5").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc6").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc7").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc8").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc9").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc10").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc11").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc12").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc13").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc14").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc15").style=" position: absolute; visibility: collapse;"
+            }
+            document.getElementById("c4").onclick=()=>{
+            document.getElementById("cc2").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc1").style="position: absolute; visibility: collapse;"
+            document.getElementById("cc3").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc4").style=" position: absolute; visibility: visible;"
+            document.getElementById("cc5").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc6").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc7").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc8").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc9").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc10").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc11").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc12").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc13").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc14").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc15").style=" position: absolute; visibility: collapse;"
+            }
+            document.getElementById("c5").onclick=()=>{
+            document.getElementById("cc2").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc1").style="position: absolute; visibility: collapse;"
+            document.getElementById("cc3").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc4").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc5").style=" position: absolute; visibility: visible;"
+            document.getElementById("cc6").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc7").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc8").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc9").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc10").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc11").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc12").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc13").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc14").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc15").style=" position: absolute; visibility: collapse;"
+            }
+            document.getElementById("c6").onclick=()=>{
+            document.getElementById("cc2").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc1").style="position: absolute; visibility: collapse;"
+            document.getElementById("cc3").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc4").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc5").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc6").style=" position: absolute; visibility: visible;"
+            document.getElementById("cc7").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc8").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc9").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc10").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc11").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc12").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc13").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc14").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc15").style=" position: absolute; visibility: collapse;"
+            }
+            document.getElementById("c7").onclick=()=>{
+            document.getElementById("cc2").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc1").style="position: absolute; visibility: collapse;"
+            document.getElementById("cc3").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc4").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc5").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc6").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc7").style=" position: absolute; visibility: visible;"
+            document.getElementById("cc8").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc9").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc10").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc11").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc12").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc13").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc14").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc15").style=" position: absolute; visibility: collapse;"
+            }
+            document.getElementById("c8").onclick=()=>{
+            document.getElementById("cc2").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc1").style="position: absolute; visibility: collapse;"
+            document.getElementById("cc3").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc4").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc5").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc6").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc7").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc8").style=" position: absolute; visibility: visible;"
+            document.getElementById("cc9").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc10").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc11").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc12").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc13").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc14").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc15").style=" position: absolute; visibility: collapse;"
+            }
+            document.getElementById("c9").onclick=()=>{
+            document.getElementById("cc2").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc1").style="position: absolute; visibility: collapse;"
+            document.getElementById("cc3").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc4").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc5").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc6").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc7").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc8").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc9").style=" position: absolute; visibility: visible;"
+            document.getElementById("cc10").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc11").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc12").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc13").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc14").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc15").style=" position: absolute; visibility: collapse;"
+            }
+            document.getElementById("c10").onclick=()=>{
+            document.getElementById("cc2").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc1").style="position: absolute; visibility: collapse;"
+            document.getElementById("cc3").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc4").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc5").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc6").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc7").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc8").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc9").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc10").style=" position: absolute; visibility: visible;"
+            document.getElementById("cc11").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc12").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc13").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc14").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc15").style=" position: absolute; visibility: collapse;"
+            }
+            document.getElementById("c11").onclick=()=>{
+            document.getElementById("cc2").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc1").style="position: absolute; visibility: collapse;"
+            document.getElementById("cc3").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc4").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc5").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc6").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc7").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc8").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc9").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc10").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc11").style=" position: absolute; visibility: visible;"
+            document.getElementById("cc12").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc13").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc14").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc15").style=" position: absolute; visibility: collapse;"
+            }
+            document.getElementById("c12").onclick=()=>{
+            document.getElementById("cc2").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc1").style="position: absolute; visibility: collapse;"
+            document.getElementById("cc3").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc4").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc5").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc6").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc7").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc8").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc9").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc10").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc11").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc12").style=" position: absolute; visibility: visible;"
+            document.getElementById("cc13").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc14").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc15").style=" position: absolute; visibility: collapse;"
+            }
+            document.getElementById("c13").onclick=()=>{
+            document.getElementById("cc2").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc1").style="position: absolute; visibility: collapse;"
+            document.getElementById("cc3").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc4").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc5").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc6").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc7").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc8").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc9").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc10").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc11").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc12").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc13").style=" position: absolute; visibility: visible;"
+            document.getElementById("cc14").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc15").style=" position: absolute; visibility: collapse;"
+            }
+            document.getElementById("c14").onclick=()=>{
+            document.getElementById("cc2").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc1").style="position: absolute; visibility: collapse;"
+            document.getElementById("cc3").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc4").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc5").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc6").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc7").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc8").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc9").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc10").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc11").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc12").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc13").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc14").style=" position: absolute; visibility: visible;"
+            document.getElementById("cc15").style=" position: absolute; visibility: collapse;"
+            }
+            document.getElementById("c15").onclick=()=>{
+            document.getElementById("cc2").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc1").style="position: absolute; visibility: collapse;"
+            document.getElementById("cc3").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc4").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc5").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc6").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc7").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc8").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc9").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc10").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc11").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc12").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc13").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc14").style=" position: absolute; visibility: collapse;"
+            document.getElementById("cc15").style=" position: absolute; visibility: visible;"
+            }
+
+
+
+
+
+
+
+     </script>
+    
+</body>
+</html>
