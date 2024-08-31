@@ -17,19 +17,62 @@
             border-right: 600px solid transparent;
             border-bottom: 900px solid rgba(0, 0, 0, 0.8);
             position: absolute;
+            color: rgb(253, 253, 253);
+            font-size: 70px;
+            
         }
-    
+        #hr1{
+            position: absolute;
+            width: 1000px;
+            top: 150px;
+        }
+        #menu{
+            position: absolute;
+            left: 80px;
+            top: 200px;
+            width: 900px;
+            height: 100px;
+            background-color: rgba(0, 0, 0, 0.8) ;
+            border-radius: 25px;
+        }
+        .menu {
+            background: none; /* Sin fondo */
+            border: none;
+             border-bottom: 2px solid #333; /* Línea negra debajo del texto */
+             color: #333; /* Color del texto */
+             padding: 10px 20px;
+             font-size: 16px;
+             cursor: pointer;
+             outline: none;
+             font-weight: bold;
+             transition: color 0.3s, border-bottom-color 0.3s, transform 0.3s;
+         }
+
+     .menu:hover {
+    background: none; /* Fondo claro para el estado iluminado */
+    color: white; /* Color del texto para el estado iluminado */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4); /* Sombra más prominente para el estado iluminado */
+    border-bottom: 4px solid white;
+    transform: scale(1.05); /* Ligero aumento de tamaño */
+    }
     </style>
 </head>
 <body >
     <script src="https://cdn.jsdelivr.net/npm/three@0.152.0/build/three.min.js"></script>
-    <div id="prin">hola</div>
+    <div id="prin">Constitución de los estados unidos mexicanos</div>
+    <hr id="hr1">
+    <div id="menu">
+        <button class="menu" style="position: absolute; left: 30px; top: 25px;">Historia</button>
+        <button class="menu" style="position: absolute; left: 180px; top: 25px;">Importancia</button>
+        <button class="menu" style="position: absolute; left: 370px; top: 25px;">Evolución</button>
+        <button class="menu" style="position: absolute; left: 550px; top: 25px;">Cusiosidades</button>
+    </div>
     <script>
         // Crear la escena
         
         const scene = new THREE.Scene();
 
-        // Crear una cámara
+        // Crear una cámara 
         const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
         camera.position.z = 15; // Alejar la cámara para ver toda la bandera
 
@@ -37,7 +80,25 @@
         const renderer = new THREE.WebGLRenderer();
         renderer.setSize(window.innerWidth, window.innerHeight);
         renderer.setClearColor(new THREE.Color(0.0039, 0.1216, 0.0549));
+       
         document.body.appendChild(renderer.domElement);
+
+
+        const backgroundLoader = new THREE.TextureLoader();
+        backgroundLoader.load("", (texture) => {
+            const backgroundGeometry = new THREE.PlaneGeometry(20, 20, 10, 10); // Ajusta el tamaño según sea necesario
+            const backgroundMaterial = new THREE.MeshBasicMaterial({ 
+                map: texture, 
+                side: THREE.DoubleSide, 
+                transparent: true 
+            });
+            const backgroundMesh = new THREE.Mesh(backgroundGeometry, backgroundMaterial);
+            // Coloca el plano de fondo en el origen y ajusta la escala para que cubra toda la vista
+            backgroundMesh.position.z = -10; // Coloca el plano detrás de otros objetos
+            scene.add(backgroundMesh);
+        });
+
+
 
         // Cargar la textura de la bandera
         const textureLoader = new THREE.TextureLoader();
